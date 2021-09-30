@@ -1,0 +1,87 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #284b63;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+header{
+    background-color: #353535;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+.title{
+    font-size: 30px;
+    font-style: oblique;
+}
+
+section{
+    color: #ffffff;
+    padding: 20px;
+    background-image: url(../Images/Iceberg.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.formContainer{
+    max-width: 230px;
+    background-color: #353535;
+    padding: 20px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.mb{
+    margin-bottom: 20px;
+}
+
+input, select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: #F9EAE8;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    color: #F9EAE8;
+    background-color: #284b63;
+    font-weight: bold;
+}
+
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: left;
+}
+
+.picture{
+    width: 140px
+}
+
+.description{
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    max-width: 40%;
+    margin-left: 40px;
+}
+
+.description p, .description h3{
+    margin-bottom: 20px;
+}
+
+.description h3{
+    font-size: 24px;
+}

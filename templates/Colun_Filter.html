@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+          crossorigin="anonymous"
+    >
+</head>
+<body>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Número De Colunas</span>
+      <input type="number" min="1" max="100" class="form-control" id="input_qtd_col" aria-label="Sizing example input"
+             aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <form action="/filter_values" id="select-container" method="POST"
+          enctype="multipart/form-data">
+        <button type="submit" id="btn_enviar" class="btn btn-primary" style="margin-top: 10px;" >Enviar</button>
+    </form>
+<!--    <select class="form-select" aria-label="Default select example">-->
+<!--      <option selected>Open this select menu</option>-->
+<!--      <option value="1">One</option>-->
+<!--      <option value="2">Two</option>-->
+<!--      <option value="3">Three</option>-->
+<!--    </select>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous">
+    </script>
+    <script>
+        columns = "{{ columns }}"
+        columns = columns.replace(/&#39;/g,'"');
+        columns = JSON.parse(columns)
+    </script>
+    <script src="{{ url_for('static', filename='JS/Colun_Filter.js') }}">
+    </script>
+</body>
+</html>

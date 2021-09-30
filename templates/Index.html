@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Images/Icon.png" type="images/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Css/Style.css') }}">
+    <title>Limpeza de Arquivo</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Detector de Duplicados - Excell & BD</h1>
+        </header>
+    <section>
+        <div class="formContainer">
+            <h2 class="mb">Deposite aqui o arquivo que você quer que seja Descoberto.</h2>
+                <p class="mb">Apenas documentos em formato Excell(. xlsx) ou Banco de Dados. Selecione um deles clicando abaixo</p>
+            <form action="/open_spreadsheet" method="POST" enctype="multipart/form-data">
+                <select name="Formato">
+                    <option value=". xlsx">Excell</option>
+                </select>
+                <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                <input type="file" name="file" />
+                <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <img class="picture" src="../static/Images/img.jpg">
+        <div class="description">
+            <h3>Quem Sou</h3>
+            <p>Me chamo Otávio Araujo e sou um desenvolvedor Back-End em Python,
+                nesse projeto eu utilizo o framework Flask e as bibliotécas:</p>
+            <p>
+            <li>Pandas</li>
+            <li>Werkzeug</li>
+            <li>Services</li>
+            <li>Openpyxl</li>
+            </p>
+
+            <div>
+                <h3>Como Funciona ?</h3>
+                <p>Nela você adiciona um arquivo excel, e escolhe as colunas que voce 
+                   quer verificar se existe duplicação. Funciona tanto para arquivos 
+                   grandes quanto pequenos</p>            
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
